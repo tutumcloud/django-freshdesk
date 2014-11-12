@@ -25,7 +25,7 @@ def authenticate(request):
     first_name = request.user.first_name
     last_name = request.user.last_name
     username = request.user.username
-    full_name = '{0} {1}'.format(first_name, last_name) if first_name or last_name else username
+    full_name = username
 
     utctime = int(time.time())
     data = '{0}{1}{2}'.format(
